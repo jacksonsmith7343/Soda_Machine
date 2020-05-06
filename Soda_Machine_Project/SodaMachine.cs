@@ -90,11 +90,12 @@ namespace Soda_Machine_Project
             }
             else if (moneyGiven > priceOfGrapeSoda)
             {
-
+                DispenseGrapeSoda();
+                DispenseMoney();
             }
             else
             {
-                //dispense moneyGiven
+                DispenseMoney();
             }
         }
 
@@ -107,11 +108,12 @@ namespace Soda_Machine_Project
             }
             else if (moneyGiven > priceOfOrangeSoda)
             {
-
+                DispenseOrangeSoda();
+                DispenseMoney();
             }
             else
             {
-                //dispense moneyGiven
+                DispenseMoney();
             }
         }
         public void SellLemonSoda()
@@ -123,29 +125,30 @@ namespace Soda_Machine_Project
             }
             else if (moneyGiven > priceOfLemonSoda)
             {
-
+                DispenseLemonSoda();
+                DispenseMoney();
             }
             else
             {
-                //dispense moneyGiven
+                DispenseMoney();
             }
         }
 
         public void DispenseMoney()
         {
-
+            
         }
         public void DispenseGrapeSoda()
         {
-
+            internalInventory.RemoveAt(0);
         }
         public void DispenseOrangeSoda()
         {
-            
+            internalInventory.RemoveAt(0);
         }
         public void DispenseLemonSoda()
         {
-
+            internalInventory.RemoveAt(0);
         }
     }
 }

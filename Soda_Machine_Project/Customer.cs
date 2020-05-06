@@ -8,5 +8,7 @@ namespace Soda_Machine_Project
 {
     class Customer
     {
+
+
     }
 }

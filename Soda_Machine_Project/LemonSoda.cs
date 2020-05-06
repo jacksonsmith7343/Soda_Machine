@@ -9,8 +9,13 @@ namespace Soda_Machine_Project
     class LemonSoda : Soda
     {
         //member variables (has a)
+        public double priceOfLemonSoda;
 
         //constructor (spawner)
+        public LemonSoda()
+        {
+            priceOfLemonSoda = .06;
+        }
 
         //member methods (can do)
     }
