@@ -10,9 +10,10 @@ namespace Soda_Machine_Project
     {
         //member variables (has a)
         public List<Coin>internalRegister;
-        public List<Soda> internalInventory;
-
-
+        public List<GrapeSoda> grapeSodasInMachine;
+        public List<OrangeSoda> orangeSodasInMachine;
+        public List<LemonSoda> lemonSodasInMachine;
+        public List<Coin> payment;
         //constructor (spawner)
         public SodaMachine()
         {
@@ -42,22 +43,26 @@ namespace Soda_Machine_Project
                 internalRegister.Add(penny);
             }
 
-            internalInventory = new List<Soda>();
+            grapeSodasInMachine = new List<GrapeSoda>();
 
             for (int index = 0; index < 10; index++)
             {
                 GrapeSoda grapeSoda = new GrapeSoda();
-                internalInventory.Add(grapeSoda);
+                grapeSodasInMachine.Add(grapeSoda);
             }
+
+            orangeSodasInMachine = new List<OrangeSoda>();
             for (int index = 0; index < 10; index++)
             {
                 OrangeSoda orangeSoda = new OrangeSoda();
-                internalInventory.Add(orangeSoda);
+                orangeSodasInMachine.Add(orangeSoda);
             }
+
+            lemonSodasInMachine = new List<LemonSoda>();
             for (int index = 0; index < 10; index++)
             {
                 LemonSoda lemonSoda = new LemonSoda();
-                internalInventory.Add(lemonSoda);
+                lemonSodasInMachine.Add(lemonSoda);
             }
         }
 
@@ -102,6 +107,7 @@ namespace Soda_Machine_Project
         public void SellOrangeSoda()
         {
             Console.WriteLine("Orange soda costs 35 cents. Please add money.");
+
             if (moneyGiven == priceOfOrangeSoda)
             {
                 DispenseOrangeSoda();
@@ -119,6 +125,9 @@ namespace Soda_Machine_Project
         public void SellLemonSoda()
         {
             Console.WriteLine("Lemon soda costs 6 cents. Please add money.");
+
+            AllowPayment();
+
             if (moneyGiven == priceOfLemonSoda)
             {
                 DispenseLemonSoda();
@@ -140,15 +149,20 @@ namespace Soda_Machine_Project
         }
         public void DispenseGrapeSoda()
         {
-            internalInventory.RemoveAt(0);
+            grapeSodasInMachine.RemoveAt(0);
         }
         public void DispenseOrangeSoda()
         {
-            internalInventory.RemoveAt(0);
+            orangeSodasInMachine.RemoveAt(0);
         }
         public void DispenseLemonSoda()
         {
-            internalInventory.RemoveAt(0);
+            lemonSodasInMachine.RemoveAt(0);
+        }
+
+        public void AllowPayment()
+        {
+            payment = new List<Coin>();
         }
     }
 }

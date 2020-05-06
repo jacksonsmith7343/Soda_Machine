@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Soda_Machine_Project
 {
-    class LemonSoda : Soda
+    class LemonSoda 
     {
         //member variables (has a)
         public double priceOfLemonSoda;
-
+        
         //constructor (spawner)
         public LemonSoda()
         {
