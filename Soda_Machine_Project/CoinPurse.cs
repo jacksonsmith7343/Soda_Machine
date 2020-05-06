@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Soda_Machine_Project
 {
-    class Dime : Coin
+    class CoinPurse
     {
         //member variables (has a)
-        public double dime;
+        public List<Coin> moneyInCoinPurse;
+
         //constructor (spawner)
-        public Dime()
-        {
-            dime = .10;
-        }
+        moneyInCoinPurse = new List<Coin>;
+
+        //member methods (can do)
+
 
     }
 }

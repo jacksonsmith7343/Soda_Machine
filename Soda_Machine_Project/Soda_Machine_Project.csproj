@@ -49,11 +49,19 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coin.cs" />
+    <Compile Include="CoinPurse.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Dime.cs" />
+    <Compile Include="GrapeSoda.cs" />
+    <Compile Include="LemonSoda.cs" />
     <Compile Include="Nickel.cs" />
+    <Compile Include="OrangeSoda.cs" />
     <Compile Include="Penny.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Quarter.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Soda.cs" />
+    <Compile Include="SodaMachine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
