@@ -61,7 +61,7 @@ namespace Soda_Machine_Project
             lemonSodasInMachine = new List<LemonSoda>();
             for (int index = 0; index < 10; index++)
             {
-                LemonSoda lemonSoda = new LemonSoda();
+                
                 lemonSodasInMachine.Add(lemonSoda);
             }
         }
@@ -89,11 +89,11 @@ namespace Soda_Machine_Project
         public void SellGrapeSoda()
         {
             Console.WriteLine("Grape soda costs 60 cents. Please add money.");
-            if (moneyGiven == priceOfGrapeSoda)
+            if (payment == priceOfGrapeSoda)
             {
                 DispenseGrapeSoda();
             }
-            else if (moneyGiven > priceOfGrapeSoda)
+            else if (payment > priceOfGrapeSoda)
             {
                 DispenseGrapeSoda();
                 DispenseMoney();
@@ -108,11 +108,11 @@ namespace Soda_Machine_Project
         {
             Console.WriteLine("Orange soda costs 35 cents. Please add money.");
 
-            if (moneyGiven == priceOfOrangeSoda)
+            if (payment == priceOfOrangeSoda)
             {
                 DispenseOrangeSoda();
             }
-            else if (moneyGiven > priceOfOrangeSoda)
+            else if (payment > priceOfOrangeSoda)
             {
                 DispenseOrangeSoda();
                 DispenseMoney();
@@ -128,11 +128,11 @@ namespace Soda_Machine_Project
 
             AllowPayment();
 
-            if (moneyGiven == priceOfLemonSoda)
+            if (payment == lemonSoda.priceOfLemonSoda)
             {
                 DispenseLemonSoda();
             }
-            else if (moneyGiven > priceOfLemonSoda)
+            else if (payment > lemonSoda.priceOfLemonSoda)
             {
                 DispenseLemonSoda();
                 DispenseMoney();
